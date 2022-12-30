@@ -1,0 +1,26 @@
+.contenedor {
+    border: 5px solid #e1bee7;
+    background-color: #fff1ff;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 150px 150px 150px;
+    grid-auto-rows: 150px;
+    height: 600px;
+    /* justify-content: center; centra la grilla de manera horizontal en realción al lugan donde se encuentra */
+    /* align-content: center; centra la grilla de manera vertical en realción al lugan donde se encuentra */
+    place-content: center;/* realiza el trabajo de justify-content y align-content a la vez */
+    /* justify-items: end;  *//* alinea cada item de la grilla de manera horizontal */
+    /* align-items: end; *//* alinea cada item de la grilla de manera vertical */
+    place-items: center;/* realiza el trabajo de justify-items y align-items a la vez */
+}
+.item {
+    border: 5px solid #00bcd4;
+    font-size: 4rem;
+}
+.item:nth-child(2) {
+    justify-self: end;
+    align-self: end;
+}
+.item:nth-child(5) {
+    place-self: start;
+}

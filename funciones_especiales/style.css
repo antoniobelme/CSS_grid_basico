@@ -1,0 +1,11 @@
+.contenedor {
+    border: 5px solid #e1bee7;
+    background-color: #fff1ff;
+    display: grid;
+    grid-template-columns: minmax(30px, 300px) 200px minmax(60px, 250px);/* minmax(xxpx, xxpx) esto permite establecer un minimo y un maximo del tamaño de la celda */
+    grid-template-rows: repeat(3, auto);/* antes se tenia 3 veces 100px, cada fila sería de tres pixeles, pero repeat(3, auto) el 3 garantiza que haya tres filas con las dimenciones de auto, es decir que se ajuste automaticamente. */
+}
+.item {
+    border: 5px solid #00bcd4;
+    font-size: 2rem;
+}

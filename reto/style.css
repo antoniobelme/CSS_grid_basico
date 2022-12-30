@@ -1,0 +1,49 @@
+.contenedor {
+    display: grid;
+    /* grid-auto-columns: 150px; */
+    grid-template-columns: 150px 150px;
+    grid-template-rows: 150px 150px 150px;
+    grid-auto-rows: 150px;
+    /* grid-auto-rows: 150px 150px; */
+    grid-auto-flow: column; 
+    /* grid-auto-columns: 150px; */
+    /* grid-template-rows: 150px 250px; */
+    /* grid-auto-rows: 150px; *//* mantiene las filas con esta medida, si se crean nuevas filas estan tendran las mismas dimensiones */
+    
+    /*grid-auto-flow: row;  modifica como se esta llenando la grilla, "columns" como valor va a crear nuevas columnas en vez de crear nuevas filas */
+    /* row-gap: 15px; /* se define el tamaño de la brecha que se quiere tener, espacio entre las filas, solo en espacios internos */
+    /* column-gap: 30px; /* se define el espaciado entre columnas, es interno, no en relacion entre las columnas y el contenedor. */ 
+    gap: 20px;/* permite establecer un espaciado homogeneo entre columnas y filas a la vez. */
+}
+.item {
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+}
+.item:nth-child(1), .item:nth-child(4){
+    background-color: #c7e86c;
+}
+.item:nth-child(2), .item:nth-child(5){
+    background-color: #90e161;
+}
+.item:nth-child(3), .item:nth-child(6){
+    background-color: #3e823b;
+}
+.item p {
+    font-size: 2rem;
+    color: white;
+    margin: 0;
+    width: 30px;
+    height: 40px;
+    text-align: center;
+}
+.item p:nth-child(1), 
+.item p:nth-child(2),
+.item p:nth-child(4),
+.item p:nth-child(5) {
+    background-color: #399c34;
+}
+.item p:nth-child(3), 
+.item p:nth-child(6) {
+    background-color: #072d05;
+}

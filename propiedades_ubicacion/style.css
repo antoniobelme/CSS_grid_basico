@@ -1,0 +1,60 @@
+/* primera manera */
+/* .contenedor {
+    border: 5px solid #e1bee7;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: 75px 75px 75px;
+    place-content: center;
+} */
+/* .item {
+    font-size: 4rem;
+} */
+/* .item-1 {
+    border: 5px solid #f8bbd0;
+    background-color: #ffeeff; */
+    /* grid-column-start: 1; establece la linea de inicio del elemento */
+    /* grid-column-end: 4; establece la linea de fin del elemento */
+/* } */
+/* .item-2 {
+    border: 5px solid #e1bee7;
+    background-color: #fff1ff; */
+    /* grid-row: 2/4; establece la linea de inicio y fin del elemento */
+/* }
+.item-3 {
+    border: 5px solid #b2ebf2;
+    background-color: #e5ffff; */
+    /* grid-area: 2 / 2 / 4 / 4; fila / columna en la que comienza / fila / columna en la que termina */
+/* } */
+
+/* Segunda manera */
+.contenedor {
+    border: 5px solid #e1bee7;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: 75px 75px 75px;
+    grid-template-areas: 
+    "header header header"
+    "side main main"
+    "side main main";/* esto permite dar nombre a cada celda de la grilla para luego nombrar que item ocupará cuál cerda */
+    place-content: center;
+}
+ .item {
+    font-size: 4rem;
+} 
+.item-1 {
+    border: 5px solid #f8bbd0;
+    background-color: #ffeeff; 
+    grid-area: header;/* aquí es donde se le dice al item que celdas ocupar de las ya nombradas anteriormente */
+} 
+.item-2 {
+    border: 5px solid #e1bee7;
+    background-color: #fff1ff; 
+    grid-area: side;
+}
+.item-3 {
+    border: 5px solid #b2ebf2;
+    background-color: #e5ffff;
+    grid-area: main;
+} 
